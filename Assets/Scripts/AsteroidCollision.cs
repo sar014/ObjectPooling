@@ -19,7 +19,15 @@ public class AsteroidCollision : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Bullets"))
         {
+            //Returning asteroid back to pool on collision
             this.pooledObject.ReturnToPoolAfterSeconds(0f);
+
+            //Returning Bullet back to pool on collision
+            PooledObject otherPooledObject = other.gameObject.GetComponent<PooledObject>();
+            if(otherPooledObject!=null)
+            {
+                otherPooledObject.ReturnToPoolAfterSeconds(0f);
+            }
         }
         
     }

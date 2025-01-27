@@ -6,8 +6,8 @@ public class PoolManager : MonoBehaviour
 {
     public ObjectPool ManagerInstance;
     PooledObject prefab;
-    [SerializeField] float spawnInterval = 1f;
-    [SerializeField] float objectLifeTime = 10f;
+    public float spawnInterval = 1f;
+    public float objectLifeTime = 10f;
 
    
     void Start()

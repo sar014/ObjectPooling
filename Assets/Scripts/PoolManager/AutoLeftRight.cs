@@ -5,11 +5,12 @@ using UnityEngine;
 public class AutoLeftRight : MonoBehaviour
 {
     Vector3 dir = Vector3.left;
-    [SerializeField] float speed = 2f;
-    [SerializeField] float TimeInterval = 4f;
+    public float speed = 2f;
+    public float TimeInterval = 4f;
 
     void Start()
     {
+        
         SetRandomDir();
 
         StartCoroutine(TimeToChange());
